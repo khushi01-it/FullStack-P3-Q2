@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+  
+    <br />
+    Integer =>
+    {{ a }}
+    <br />
+
+    String =>
+    {{ test }}
+    <br />
+
+    Current date =>
+    {{ date1 }}
+    <br />
+    <hr>
+   Array List 
+    <ul *ngFor="let i of b">
+      <li>
+        {{ i }}
+      </li>
+    </ul>
+    <hr>
+    Array in Combo 
+    <select>
+      <option disabled>Choose from this</option>
+      <option *ngFor="let i of b" >
+        <span>{{i}}</span>
+      </option>
+    </select>
+<hr>
+    <select  (click)="OnSelect($event)" multiple>
+      <option disabled>Choose from this</option>
+      <option *ngFor="let i of b1" [value]="i.name">
+        <span>{{i.name}}</span>
+      </option>
+    </select>
+    <br />
+    <br />
+
+    <textarea  value="{{ selectedItem }}"></textarea>
+    <hr>
+    
+  </body>
+</html>
+<router-outlet></router-outlet>
